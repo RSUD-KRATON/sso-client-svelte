@@ -1,5 +1,5 @@
 {
-  "name": "@kraton/sso-client-svelte",
+  "name": "@virusphp/sso-client-svelte",
   "version": "1.0.0",
   "description": "SDK dan Library Autentikasi Single Sign-On (SSO) Portal RSUD Kraton Pekalongan untuk Svelte 5 & SvelteKit 2",
   "type": "module",
@@ -12,7 +12,7 @@
     "./components/IdleTimeoutModal.svelte": "./src/components/IdleTimeoutModal.svelte"
   },
   "scripts": {
-    "test": "node -e \"console.log('@kraton/sso-client-svelte loaded successfully')\""
+    "test": "node -e \"console.log('@virusphp/sso-client-svelte loaded successfully')\""
   },
   "keywords": [
     "svelte",

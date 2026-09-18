@@ -1,4 +1,4 @@
-# SSO Client Svelte (@kraton/sso-client-svelte)
+# SSO Client Svelte (@virusphp/sso-client-svelte)
 
 > **SDK & Library Resmi Autentikasi Single Sign-On (SSO) Portal RSUD Kraton Pekalongan untuk Svelte 5 & SvelteKit 2.**
 
@@ -14,14 +14,16 @@ Library ini menyederhanakan integrasi autentikasi terpusat SSO Portal RSUD Krato
 
 ## 📦 1. Cara Instalasi
 
-Anda dapat menginstal library ini langsung dari repositori GitHub RSUD Kraton:
+Install library langsung dari NPM Registry resmi:
 
 ```bash
-# Menggunakan npm
-npm install https://github.com/RSUD-KRATON/sso-client-svelte.git
+npm install @virusphp/sso-client-svelte
+```
 
-# Atau jika sudah dipublikasikan ke package registry
-npm install @kraton/sso-client-svelte
+Atau dari repositori GitHub RSUD Kraton:
+
+```bash
+npm install https://github.com/RSUD-KRATON/sso-client-svelte.git
 ```
 
 ---
@@ -57,7 +59,7 @@ Buat file `src/lib/server/sso.js`:
 
 ```javascript
 import { env } from '$env/dynamic/private';
-import { createSsoClient } from '@kraton/sso-client-svelte/server';
+import { createSsoClient } from '@virusphp/sso-client-svelte/server';
 
 export const sso = createSsoClient({
     ssoServerUrl: env.URL_SERVER_SSO || 'http://sso.simrs',
@@ -76,7 +78,7 @@ Gunakan `createSsoHandle` untuk memproteksi seluruh rute privat secara otomatis:
 
 ```javascript
 import { sso } from '$lib/server/sso.js';
-import { createSsoHandle } from '@kraton/sso-client-svelte/server';
+import { createSsoHandle } from '@virusphp/sso-client-svelte/server';
 
 export const handle = createSsoHandle(sso, {
     publicRoutes: [
@@ -160,7 +162,7 @@ export async function GET({ url, cookies, setHeaders }) {
 
 ```svelte
 <script>
-    import { SsoLoginButton } from '@kraton/sso-client-svelte';
+    import { SsoLoginButton } from '@virusphp/sso-client-svelte';
 </script>
 
 <div class="max-w-md mx-auto p-6">
@@ -178,8 +180,8 @@ export async function GET({ url, cookies, setHeaders }) {
 ```svelte
 <script>
     import { page } from '$app/stores';
-    import { setupIdleTimer } from '@kraton/sso-client-svelte/client';
-    import { IdleTimeoutModal } from '@kraton/sso-client-svelte';
+    import { setupIdleTimer } from '@virusphp/sso-client-svelte/client';
+    import { IdleTimeoutModal } from '@virusphp/sso-client-svelte';
 
     let { data, children } = $props();
 
@@ -226,3 +228,4 @@ export async function GET({ url, cookies, setHeaders }) {
 
 ## 📄 Lisensi
 Dilisensikan di bawah [MIT License](LICENSE). Dikelola oleh **Tim IT & SIMRS RSUD Kraton Pekalongan**.
+
