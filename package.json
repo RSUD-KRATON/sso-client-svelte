@@ -1,0 +1,44 @@
+{
+  "name": "@kraton/sso-client-svelte",
+  "version": "1.0.0",
+  "description": "SDK dan Library Autentikasi Single Sign-On (SSO) Portal RSUD Kraton Pekalongan untuk Svelte 5 & SvelteKit 2",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./server": "./src/server/index.js",
+    "./client": "./src/client/index.js",
+    "./components/SsoLoginButton.svelte": "./src/components/SsoLoginButton.svelte",
+    "./components/IdleTimeoutModal.svelte": "./src/components/IdleTimeoutModal.svelte"
+  },
+  "scripts": {
+    "test": "node -e \"console.log('@kraton/sso-client-svelte loaded successfully')\""
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "svelte5",
+    "sso",
+    "auth",
+    "rsud-kraton",
+    "single-sign-on",
+    "simrs"
+  ],
+  "author": "IT & SIMRS RSUD Kraton Pekalongan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSUD-KRATON/sso-client-svelte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RSUD-KRATON/sso-client-svelte/issues"
+  },
+  "homepage": "https://github.com/RSUD-KRATON/sso-client-svelte#readme",
+  "peerDependencies": {
+    "@sveltejs/kit": "^2.0.0",
+    "svelte": "^5.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3"
+  }
+}
